@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -17,14 +16,16 @@ class App extends Component {
     }
   render() {
     const { value } = this.state;
+    const { name } = this.props;
     return (
-      <div className="App">
-        <div>
+
+        <div style={{backgroundColor: name, color: 'white' }}>
+          <h1>{name} counter </h1>
           <h2>{value}</h2>
           <button onClick={this.inc}>+</button>
           <button onClick={this.dec}>-</button>
-          </div>
-      </div>
+        </div>
+
     );
   }
 }
